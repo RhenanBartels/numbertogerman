@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+<h1> Number to German </h1>
+<br/>
+<form action="" method="GET">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" class="btn btn-primary btn-lg" value="Konvertieren">
+    <br/>
+    <br/>
+    <h2> {{ number }} </h2>
+</form>
+</center>
+{% endblock %}
