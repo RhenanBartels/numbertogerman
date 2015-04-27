@@ -32,6 +32,7 @@ var csrftoken = getCookie('csrftoken');
             success: function(data) {
                     $("#txtTest").text(data.number);
                     $("#loading").hide();
+                    $("#german-number").show();
                     $("#german-number").text(data.number);
                             },
             failure: function(data) {
