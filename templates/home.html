@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 {% block content %}
 <center>
 <h1> Number to German </h1>
@@ -10,7 +11,10 @@
     <input type="submit" id="btnTest"class="btn btn-primary btn-lg" value="Konvertieren">
     <br/>
     <br/>
-    <h2 id="german-number"> {{ number }} </h2>
+    <div id="loading" style="display:none">
+        <img src= "{% static "images/loading_spinner.gif" %}"/>
+    </div>
+        <h2 id="german-number"> {{ number }} </h2>
 </center>
 {% endblock %}
 

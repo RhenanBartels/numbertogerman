@@ -25,8 +25,12 @@ var csrftoken = getCookie('csrftoken');
             data: {"german_number": $("#id_german_number").val(),
             'csrfmiddlewaretoken': csrftoken},
             headers: {'X-CSRFToken': csrftoken},
+            beforeSend: function(){
+                $("#loading").show();
+            },
             success: function(data) {
                     $("#txtTest").text(data.number);
+                    $("#loading").hide();
                     $("#german-number").text(data.number);
                             },
             failure: function(data) {
