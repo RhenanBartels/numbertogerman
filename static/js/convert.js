@@ -27,6 +27,7 @@ var csrftoken = getCookie('csrftoken');
             headers: {'X-CSRFToken': csrftoken},
             beforeSend: function(){
                 $("#loading").show();
+                $("#german-number").hide();
             },
             success: function(data) {
                     $("#txtTest").text(data.number);
