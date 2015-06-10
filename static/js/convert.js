@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
 function getCookie(name) {
-    //undo git test
     var cookieValue = null;
     if (document.cookie && document.cookie != '') {
         var cookies = document.cookie.split(';');
